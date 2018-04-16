@@ -19,12 +19,17 @@ export class MyApp {
     this._platform.ready().then(() => {
       this._mingleService.init().subscribe(
         (res) => {
-          console.log('Mingle inicializado');
-          this.rootPage = HomePage;
-        },
-        (error: MingleError) => {
-          console.log('Sessão não iniciada');
-          this.rootPage = LoginPage;
+          this._mingleService.getUser().subscribe(
+            (user) => {
+              let loggedUser = this._mingleService.getSessionInfo().user;
+              if(!loggedUser || !user) {
+                console.log('Sessão não iniciada');
+                this.rootPage = LoginPage;
+              } else {
+                this.rootPage = HomePage;
+              }
+            }
+          )
         }
       );
       this._statusBar.styleDefault();
