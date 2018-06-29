@@ -85,10 +85,4 @@ export class LoginPage {
 		}
 	}
 
-	// public processKeyUpLogin(e, user: string, password: string, alias: string): void {
-	// 	if (e.keyCode == 13) { // 13 = enter
-	// 		this.signIn(user, password, alias);
-	// 	}
-  // }
-
 }
