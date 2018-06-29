@@ -4,6 +4,8 @@ import { NavController, ToastController, LoadingController } from 'ionic-angular
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { LoginService } from '../../providers/login.service';
 
+import { ThfPageLogin, ThfPageLoginCustomField, ThfPageLoginLiterals } from '@totvs/thf-ui/components/thf-page';
+
 // import { StorageService } from './../../providers/storage.service';
 // import { TabsPage } from './../tabs/tabs.page';
 // import { FieldsService } from '../../providers/fields.service';
@@ -13,6 +15,7 @@ import { LoginService } from '../../providers/login.service';
 	templateUrl: 'login.html'
 })
 export class LoginPage {
+  customField: string | ThfPageLoginCustomField;
 	login: FormGroup;
 	showErrors: boolean = false;
 
@@ -32,20 +35,20 @@ export class LoginPage {
 			password: [''],
 			alias: ['', Validators.required],
 			showPassword: false
-		});
+    });
+
+    this.customField = "alias"
 	}
 
-	public signIn(user: string, password: string, alias: string): void {
+	public signIn(auth): void {
 		let loading = this.loadingCtrl.create({
 			dismissOnPageChange: true
 		});
 		loading.present();
 
-		this._loginService.signIn(user, password, alias)
+		this._loginService.signIn(auth.login, auth.password, auth.alias)
 			.subscribe(() => {
 				console.log('Sign in ok');
-				// this._fieldsService.loadCheckedFields();
-				// this._storageService.set(StorageService.ALIAS, alias).subscribe();
 				this._navCtrl.setRoot(HomePage);
 			},
 			(authError) => {
@@ -54,7 +57,7 @@ export class LoginPage {
 				this.showErrorToast();
 				loading.dismiss();
 			});
-	}
+  }
 
 	public managePwd(passwordEl): void {
 		passwordEl.type = this.login.controls.showPassword.value ? 'text' : 'password';
@@ -79,12 +82,6 @@ export class LoginPage {
 	public processKeyUp(e, el): void {
 		if (e.keyCode == 13) { // 13 = enter
 			el.setFocus();
-		}
-	}
-
-	public processKeyUpLogin(e, user: string, password: string, alias: string): void {
-		if (e.keyCode == 13) { // 13 = enter
-			this.signIn(user, password, alias);
 		}
 	}
 

@@ -8,18 +8,20 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { Configuration, MingleModule } from '@totvs/mobile-mingle';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ThfModule } from '@totvs/thf-ui';
+import { RouterModule } from '@angular/router';
 
 export function mingleFactory() {
-  
+
     let config = new Configuration();
-  
-    config.app_identifier = 'APP_ID';
-    config.environment = 'DEV';
-    config.server = 'https://MINGLE_SERVER';
-    config.modules.crashr = false;
-    config.modules.usage_metrics = true;
-    config.modules.gateway = true;
-  
+
+    config.app_identifier = '<APP_ID>';
+    config.environment = '<DEV | PROD>';
+    config.server = '<http | https + MINGLE_SERVER_ADDRESS>';
+    config.modules.crashr = '<true | false>';
+    config.modules.usage_metrics = '<true | false>';
+    config.modules.gateway = '<true | false>';
+
     return config;
   }
 
@@ -29,8 +31,10 @@ export function mingleFactory() {
     PAGES
   ],
   imports: [
+    ThfModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    RouterModule.forRoot([]),
     MingleModule.forRoot({
 			provide: Configuration,
 			useFactory: mingleFactory
