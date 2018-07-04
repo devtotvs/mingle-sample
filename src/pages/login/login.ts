@@ -4,7 +4,7 @@ import { NavController, ToastController, LoadingController } from 'ionic-angular
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { LoginService } from '../../providers/login.service';
 
-import { ThfPageLogin, ThfPageLoginCustomField, ThfPageLoginLiterals } from '@totvs/thf-ui/components/thf-page';
+import { ThfPageLoginCustomField } from '@totvs/thf-ui/components/thf-page';
 
 // import { StorageService } from './../../providers/storage.service';
 // import { TabsPage } from './../tabs/tabs.page';

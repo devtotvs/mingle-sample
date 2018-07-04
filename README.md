@@ -1,4 +1,4 @@
-# Exemplo de uso do Mingle com Ionic
+# Exemplo de uso do Mingle com Ionic utilizando o [tema da Totvs](https://thf.totvs.com.br/guides/totvs-theme-ionic)
 
 ## O que é Mingle?
 
@@ -9,7 +9,7 @@ O Mingle é o middleware mobile da TOTVS que permite a utilização das APIs dos
 Verifique a documentação em *https://www.npmjs.com/package/@totvs/mobile-mingle*
 
 
-# Instalando o THF no Ionic
+# Passos feitos construção deste aplicativo
 
 ### Passo 1 - Instalando a dependência
 
@@ -41,7 +41,7 @@ import { ThfModule } from '@totvs/thf-ui';
 ...
 ```
 
-#### Passo 1.1 - Configurando o estilo
+#### Passo 1.2 - Configurando o estilo
 
-Para que os componentes, *[thf-ui](https://thf.totvs.com.br/documentation)*, sejam exibidos corretamente, é necessário incluir o arquivo de estilo ao projeto. Para isso, verifique a documentaçao em *https://thf.totvs.com.br/guides/totvs-theme-ionic*, vá para diretamente ao tópico '**Como configurar o thf-theme?**'.
+Para que os componentes, do *[thf-ui](https://thf.totvs.com.br/documentation)*, sejam exibidos corretamente, é necessário incluir o arquivo de estilo ao projeto. Para isso, verifique a documentaçao em *https://thf.totvs.com.br/guides/totvs-theme-ionic*, vá diretamente ao tópico '**Como configurar o thf-theme?**'.
 
