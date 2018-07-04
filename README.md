@@ -43,5 +43,5 @@ import { ThfModule } from '@totvs/thf-ui';
 
 #### Passo 1.1 - Configurando o estilo
 
-Para que os componentes sejam exibidos corretamente, é necessário incluir o arquivo de estilo ao projeto. Para isso, verifique a documentaçao em https://thf.totvs.com.br/guides/totvs-theme-ionic, vá para o tópico 'Como configurar o thf-theme?'.
+Para que os componentes sejam exibidos corretamente, é necessário incluir o arquivo de estilo ao projeto. Para isso, verifique a documentaçao em *https://thf.totvs.com.br/guides/totvs-theme-ionic*, vá para diretamente ao tópico **Como configurar o thf-theme?**.
 
