@@ -6,7 +6,7 @@ O Mingle é o middleware mobile da TOTVS que permite a utilização das APIs dos
 
 ## Como usar?
 
-Verifique a documentação em https://www.npmjs.com/package/@totvs/mobile-mingle
+Verifique a documentação em *https://www.npmjs.com/package/@totvs/mobile-mingle*
 
 
 # Instalando o THF no Ionic
