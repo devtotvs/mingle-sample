@@ -13,7 +13,7 @@
     },
     "config": {
         "ionic_copy": "./scripts/copy-custom-libs.js"
-      },
+    },
     "dependencies": {
         "@angular/common": "5.0.3",
         "@angular/compiler": "5.0.3",
@@ -32,6 +32,7 @@
         "@ionic/cloud-angular": "^0.12.0",
         "@ionic/storage": "2.1.3",
         "@totvs/mobile-mingle": "^3.2.8",
+        "@totvs/mobile-theme": "^12.1.18-alpha.21",
         "@totvs/thf-ui": "^1.6.1",
         "cordova-android": "7.0.0",
         "cordova-ios": "4.5.4",
